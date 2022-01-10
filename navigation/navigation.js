@@ -7,6 +7,8 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Home from '../screens/Home';
 import { StatusBar } from 'react-native';
 import COLORS from '../assest/const/colors';
+import Details from '../screens/Details';
+import Saved from '../screens/Saved';
 
 
 const Stack = createNativeStackNavigator();
@@ -17,6 +19,8 @@ function Navigation() {
         <StatusBar barStyle='dark-content' backgroundColor={COLORS.white}/>
       <Stack.Navigator screenOptions={{headerShown:false}} initialRouteName='Home'>
         <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Details" component={Details} />
+        <Stack.Screen name="Saved" component={Saved} />
       </Stack.Navigator>
     </NavigationContainer>
   );
